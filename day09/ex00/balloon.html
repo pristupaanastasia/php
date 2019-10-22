@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        #circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle">
+        <script>
+            circle = document.getElementById("circle");
+            width = 210;
+            height = 210;
+            circle.onclick = function()
+            {
+                if (circle.style.backgroundColor == "red")
+                    circle.style.backgroundColor = "green";
+                else
+                {
+                    if (circle.style.backgroundColor == "green")
+                    circle.style.backgroundColor = "blue";
+                    else
+                    {
+                        circle.style.backgroundColor = "red";
+                    }
+
+                }
+                if (width  > 420 && height> 420)
+                {
+                    width = 200;
+                    height = 200;
+                }
+                circle.style.width =width + 'px';
+                circle.style.height = height + 'px';
+                width = width + 10;
+                height = height + 10;
+
+            }
+            circle.onmouseleave = function(){
+                width = width - 5;
+                height = height - 5;
+                if (circle.style.backgroundColor == "red")
+                    circle.style.backgroundColor = "blue";
+                else
+                {
+                    if (circle.style.backgroundColor == "blue")
+                    circle.style.backgroundColor = "green";
+                    else
+                    {
+                        circle.style.backgroundColor = "red";
+                    }
+
+                }
+                if (width  < 200 && height< 200)
+                {
+                    width = 200;
+                    height = 200;
+                }
+                circle.style.width =width + 'px';
+                circle.style.height = height + 'px';
+            }
+        </script>
+    </div>
+</body>
+</html>

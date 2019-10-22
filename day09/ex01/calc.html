@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        .inp{
+            display:  flex;
+            text-align:center;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .center { 
+             text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="inp">
+    <input type="text" size="40" id="t1">
+    <form action="#" id="form" method="GET">
+            <SELECT NAME=group id="group" >
+            <OPTION> + </OPTION>
+            <OPTION> -</OPTION>
+            <OPTION> /</OPTION>
+            <OPTION> *</OPTION>
+            <OPTION > %</OPTION>
+            </SELECT>
+        </form>     
+    <input type="text" size="40" id="t2">
+    </div>
+    <div class = "center">
+    <input type="submit" value="Try me!" id = "h" >
+    </div>
+    <div id="calc">
+        <script>
+            var t1 = document.getElementById("t1");
+            var t2 = document.getElementById("t2");
+            var elem = document.getElementById("group");
+            const kek = document.getElementById("h");
+
+            kek.onclick = function () {
+            if (parseInt(t1.value) >=0 && parseInt(t2.value)>=0)
+            {
+                if (elem.value === "+")
+                {
+                    console.log(parseInt(t1.value) + parseInt(t2.value));
+                    alert(parseInt(t1.value) + parseInt(t2.value));
+                }
+                if (elem.value === "-")
+                {
+                    console.log(parseInt(t1.value) - parseInt(t2.value));
+                    alert(parseInt(t1.value) - parseInt(t2.value));
+                }
+                if (elem.value === "/" && parseInt(t2.value)!=0)
+                {
+                    if (parseInt(t2.value)!=0)
+                    {
+                        console.log(parseInt(t1.value) / parseInt(t2.value));
+                        alert(parseInt(t1.value) / parseInt(t2.value));
+                    }
+                    else
+                    {
+                        alert("It's over 9000!");
+                    }
+                }
+                if (elem.value === "*")
+                {
+                    console.log(parseInt(t1.value) * parseInt(t2.value));
+                    alert(parseInt(t1.value) * parseInt(t2.value));
+                }
+                if (elem.value === "%" )
+                {
+                    if (parseInt(t1.value)!=0)
+                    {
+                        console.log(parseInt(t1.value) % parseInt(t2.value));
+                        alert(parseInt(t1.value) % parseInt(t2.value));  
+                    }
+                    else
+                    {
+                        console.log("It's over 9000!");
+                        alert("It's over 9000!");
+                    }
+                }
+            }
+            else
+            {
+                console.log("Error :(");
+                alert("Error :(");
+            } 
+        } 
+        setTimeout("alert('Please, use me...')", 30000);  
+        </script>
+    </div>
+</body>
+</html>

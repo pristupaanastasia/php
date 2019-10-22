@@ -1,0 +1,6 @@
+Php -S localhost:8080
+PHP 5.6.30 Development Server started at Fri Oct 11 12:53:53 2019
+Listening on http://localhost:8080
+Document root is /Users/mriley/Desktop/phpday03/ex01
+Press Ctrl-C to quit.
+[Fri Oct 11 12:54:03 2019] ::1:53161 [200]: /phpinfo.php

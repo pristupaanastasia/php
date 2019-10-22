@@ -1,0 +1,4 @@
+use db_mriley; 
+
+SELECT id_distrib
+from `distrib`
